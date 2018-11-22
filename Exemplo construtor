@@ -1,0 +1,89 @@
+package exemplo;
+
+public class Pessoa {
+	//Atributos
+	private String nome;
+	private String email;
+	private String cpf;
+	private String endereco;
+	private int idade;
+	
+	private  Pessoa[] familiares = new Pessoa[50];
+	private int contadorFamiliar = 0;
+	
+	
+	
+	//Toda classe criada possui um Construtor
+	//o Construtor é chamada somente uma vez,não é um tipo de método chamado toda vez que precisar,ele não tem retorno nenhum e tem o mesmo nome da classe
+	
+	//Métodos
+	
+	
+    public Pessoa(){ //CONSTRUTOR default(CONSTRUTOR PADRÃO,não tem parâmetro nenhum). Ele é utilizado mesmo quando não esti ver explícito na classe.
+		System.out.println("Usando o construtor default........");
+	}
+	
+	//Construtor parametrizado
+	 public Pessoa(String nome,String cpf, String email,String endereco,int idade){
+		 System.out.println("Usando o construtor parametrizado completo....");
+		 		 this.nome=nome;
+		 		 this.cpf=cpf;
+		 		 this.email=email;
+		 		 this.endereco=endereco;
+		 		 this.idade=idade;
+	 }
+	 public Pessoa(String nome,String cpf){
+		 System.out.println("Usando o construtor parametrizado parcial......");
+		 this.nome=nome;
+		 this.cpf=cpf;
+	 }
+	 
+	 //Métodos
+	 public void adicionaFamiliar(Pessoa familiar){
+		 
+		 familiares[contadorFamiliar]=familiar;
+		 contadorFamiliar++;
+		 
+	 }
+	 
+	 public void listarFamiliares(){
+		 for(int i=0;i < contadorFamiliar; i++){
+			 System.out.println(familiares[i].getNome());
+		 }
+		 
+	 }
+	 
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	public int getIdade() {
+		return idade;
+	}
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	
+	
+
+}
