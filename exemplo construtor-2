@@ -1,0 +1,61 @@
+package exemplo;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+	public static void main(String[]args){
+		
+		
+		
+		//Pessoa t= new Pessoa();
+		
+		//JOptionPane.showInputDialog(null, "Digite o seu nome");
+		
+		
+		
+		Pessoa maria= new Pessoa();
+		
+		maria.setNome("Maria Aparecida");
+		maria.setCpf("000.111.222-3");
+		maria.setEmail("mariazinha@bol.com.br");
+		maria.setEndereco("Rua da Maria,50");
+		maria.setIdade(45);
+		
+		
+		Pessoa jose = new Pessoa("Jose Santos", "168.168.166-4", "josenindo@bol.com.br",
+				"Rua do Jose,10", 22);
+		
+		Scanner scanner= new Scanner(System.in);
+		
+		Pessoa p = new Pessoa(); // novo objeto 
+		System.out.println("Digite o nome: ");
+		String nome = scanner.nextLine();
+		
+		System.out.println("Digite o CPF:  ");
+		String cpf = scanner.nextLine();
+		
+		System.out.println("Digite o e-mail:  ");
+		String email = scanner.nextLine();
+		
+		System.out.println("Digite o endereço:  ");
+		String endereco = scanner.nextLine();
+		
+		System.out.println("Digite sua idade: ");
+		int idade=scanner.nextInt();
+		
+		p.setNome(nome);
+		p.setCpf(cpf);
+		p.setEmail(email);
+		p.setEndereco(endereco);
+		p.setIdade(idade);
+		
+		System.out.println("Os dados de p são: \n"+ p.getNome()+"\n"+p.getCpf());
+		
+		maria.adicionaFamiliar(jose);
+		maria.adicionaFamiliar(p);
+	    maria.listarFamiliares();
+		
+	}
+}
