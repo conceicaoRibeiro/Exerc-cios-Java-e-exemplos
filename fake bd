@@ -1,0 +1,26 @@
+package atividade;
+
+public class FakeBd {
+
+	//declaração do vetor e atributos aí em baixo
+	private Cliente[]clientes; //= new Cliente[50];
+	private int contador;  
+	
+	//Tornando o construtor default explicito
+	public FakeBd(){
+     clientes = new Cliente[50];
+	 contador=0;		
+	}
+	public void cadastrarCliente(Cliente c){ //criando um método(funções)
+		clientes[contador]=c;
+		contador++;
+	}
+	 //lista os clientes cadastrados
+	 public void listarClientes(){
+		 for(int i=0; i < contador; i++){
+			 System.out.println("Nome:  "+ clientes[i].getNome() +"|CPF: " + clientes[i].getCpf() +"\n" );
+		 }
+			 
+		 
+	 }
+}
