@@ -1,0 +1,19 @@
+package atividade;
+
+public class Menu {
+      /*
+       * O modificador static faz com que o método ou atributo 
+       * possa ser acessado independentemente da existência  de 
+       * uma instância do objeto.
+       */
+     public static void exibeMenu(){
+    	 
+    	 System.out.println("=====Sistema de Cadastro========");
+    	 System.out.println("1- Cadastrar Cliente");
+    	 System.out.println("2- Listar Clientes");
+    	 System.out.println("3- Sair ");
+    	 System.out.print("Qual opção deseja ? ");
+    	 
+    	
+     }
+}
