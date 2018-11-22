@@ -1,46 +1,34 @@
-package agenda;
-
-import java.util.Scanner;       //Buguei tudo!!!!!!!!!!!!!!!! Está incompleto!
+package exemplo;
 
 public class Principal {
 
+	public static void main(String[] args) {
+      
+		Aluno a= new Aluno();
+		
+		a.setNome("Claudio");
+		a.setCpf("111.222.333-44");
+		a.setData("11/10/1998");
+		a.setMatricula("aa2222");
+		a.setEmail("claudinho@uol.com.br");
+		
+		a.falar(55);
+		a.estudar(32);
+		 
+		
+		Medico m = new Medico();
+		m.setNome("Julio ");
+		m.setEspecialidade("Cardiologia");
+		
+		m.dormir(8);
+        a.dormir(8);
+        
+        System.out.println(a);
+        System.out.println(m);
+        
+		 
+        //método toString,todo objeto tas esse metodo,ele vem da Superclasse,todos os objetos que criamos já tem esse métod,poré podemos muda-lo.
+		
+	}
 
-	public static void main(String []args){
-		int opcao;
-	
-		Patrocinador patrocinador = new Patrocinador();
-		
-		
-		
-		do{
-		System.out.println("===Menu=====");
-		System.out.println("1.Patrocinador");
-		System.out.println("2.Local");
-		System.out.println("3. Evento");
-		System.out.println("4.Participante");
-		System.out.println("5.Inscirção");
-		System.out.println("0. Sair");
-		System.out.println("==============");
-		System.out.println("Opção:");
-		
-	     Scanner in =new Scanner(System.in);
-	     opcao=in.nextInt();
-	     
-	     if(opcao==1){
-	    	 System.out.println("++Patrocinador++");
-	    		 
-	     }else if(opcao==2){
-	    	 System.out.println("++Local++");
-	     }else if(opcao==3){
-	    	 System.out.println("++Evento++");
-	    	
-	     }else if(opcao==4){
-	    	 System.out.println("++Participante++");
-	     }else if(opcao==5){
-	    	 System.out.println("++Inscirção++");
-	     }
-		}while(opcao!=0);
-	     
-	                                                                                                                                                                           
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	}
 }
