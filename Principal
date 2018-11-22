@@ -1,0 +1,64 @@
+package atividade;
+
+import java.util.Scanner;
+
+public class Principal {
+   
+	 public static void main(String[]args){
+		 
+		FakeBd banco = new FakeBd();
+		Scanner scanner = new Scanner(System.in);
+		int opcao;
+
+	    do{
+		
+			
+			Menu.exibeMenu();
+			
+		    opcao = scanner.nextInt();
+		    scanner.nextLine(); // Artifício para que o scanner não fique "parado" na linha int.
+			
+			switch (opcao){
+			
+			case 1:
+				System.out.println("Informe o nome: ");
+				String nome = scanner.nextLine();
+				
+				System.out.println("Informe o CPF: ");
+				String cpf = scanner.nextLine();
+				
+				System.out.println("Informe o seu e-mail: ");
+				String email =scanner.nextLine();
+			
+				Cliente c= new Cliente();
+				c.setNome(nome);
+				c.setCpf(cpf);
+				c.setEmail(email);
+				
+				banco.cadastrarCliente(c); //responsável porcadastrar o cliente 
+				
+				break;
+				
+			case 2:
+				
+				banco.listarClientes();
+				
+				break;
+				
+			case 3:
+				System.out.println("Se manda!.....");
+	           
+				break;	
+				
+			default:  /*
+			          * O DEFAULT SERÁ EXECUTADO SEMPRE QUE O USUÁRIO 
+			          * ESCOLHER  UMA OPÇÃO DIFERENTE DOS CASES.
+			         */
+			            
+				System.out.println("SE MATA,OPÇÃO INVÁLIDA!HAHAHAHAHAHAHAHAHAHAHAHAHAHA");
+		}
+			
+	   }while(opcao!=3);
+		 
+	 }
+}
